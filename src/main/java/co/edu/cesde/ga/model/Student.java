@@ -2,21 +2,21 @@ package co.edu.cesde.ga.model;
 
 public class Student  extends  Person
 {
-   private String birthday;
+   private static String birthDate;
     public Student(){
 
     }
     public Student(long userId, String code, String documentNumber, String firstName, String lastName, String status, String birthday) {
         super(userId, code, documentNumber, firstName, lastName, status);
-        this.birthday = birthday;
+        this.birthDate = birthDate;
     }
 
-    public String getBirthday() {
-        return birthday;
+    public static String getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
     }
 }
 
