@@ -1,20 +1,20 @@
 package co.edu.cesde.ga.model;
 
-public class Person {
+public abstract class Person {
        private long userId;
-       private String code;
+       private String documentType;
         private String documentNumber;
         private String firstName;
         private String lastName;
         private String status;
 
-     public  Person() {
+    protected   Person() {
 
      }
 
-    public Person(long userId, String code, String documentNumber, String firstName, String lastName, String status) {
+    protected Person(long userId, String documentType, String documentNumber, String firstName, String lastName, String status) {
         this.userId = userId;
-        this.code = code;
+        this.documentType = documentType;
         this.documentNumber = documentNumber;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -29,11 +29,11 @@ public class Person {
         this.userId = userId;
 
     }
-    public String getCode() {
-        return code;
+    public String getDocumentType() {
+        return documentType;
     }
-    public void setCode(String code) {
-        this.code = code;
+    public void setDocumentType(String documentType) {
+        this.documentType = documentType;
 
     }
     public String getDocumentNumber() {
@@ -61,6 +61,19 @@ public class Person {
     }
     public void setStatus(String status) {
         this.status = status;
+    }
+    @Override
+    public String toString() {
+        return "Person{ " +
+                "userId = " + getUserId() +
+                ", documentType = " + getDocumentType() + '\n' +
+                ", documentNumber= " + getDocumentNumber() + '\n' +
+                ", firstName= " + getFirstName() + '\n' +
+                ", lastName= " + getLastName() + '\n' +
+                ", status= " + getStatus() + '\n' +
+                "}";
+
+
     }
 
 
