@@ -14,7 +14,9 @@ public interface StudentRepository {
 
                 Student findById(long studentId);
 
-                Student findByDocumentNumber(String documentNumber);
+    Student findById(Long studentId);
+
+    Student findByDocumentNumber(String documentNumber);
 
                 boolean update(Student updatedstudent);
 
@@ -22,7 +24,11 @@ public interface StudentRepository {
 
                 boolean existByDocumentNumber(String documentNumber);
 
-                int count();
+    boolean delete(Long studentId);
+
+    boolean existsByDocumentNumber(String documentNumber);
+
+    int count();
             }
 
 
