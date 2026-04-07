@@ -56,6 +56,7 @@ public class StudentRepositoryInMemory implements StudentRepository {
         return null;
     }
 
+
     @Override
     public Student findById(Long studentId) {
         if (studentId == null) {
@@ -118,10 +119,7 @@ public class StudentRepositoryInMemory implements StudentRepository {
         return false;
     }
 
-    @Override
-    public boolean existByDocumentNumber(String documentNumber) {
-        return false;
-    }
+
 
 }
 
