@@ -22,7 +22,10 @@ public interface StudentRepository {
 
                 boolean delete(long studentId);
 
-                boolean existByDocumentNumber(String documentNumber);
+    static boolean existByDocumentNumber(String documentNumber) {
+
+        return false;
+    }
 
     boolean delete(Long studentId);
 

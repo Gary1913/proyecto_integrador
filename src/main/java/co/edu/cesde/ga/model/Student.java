@@ -5,7 +5,7 @@ public class Student  extends  Person
     private Long studentId;
    private  String birthDate;
 
-    public Student(){
+    public Student(Object o, Object object, String cc, String number, String firstname, String lastname ){
         super();
 
     }
@@ -14,6 +14,8 @@ public class Student  extends  Person
         this.birthDate = birthDate;
         this.studentId = studentId;
     }
+
+
     public Long getStudentId() {
         return studentId;
     }
